@@ -99,10 +99,9 @@ module Codebreaker
 
     def game_statistic
       puts 'Do you want to save result (Y/n) ?'
-      if ask.match(/^[Yy]$/)
-        @statistic.save
-        say "Statistic:\n#{@statistic}\n"
-      end
+      return unless ask.match(/^[Yy]$/)
+      @statistic.save
+      say "Statistic:\n#{@statistic}\n"
     end
 
     def replay
